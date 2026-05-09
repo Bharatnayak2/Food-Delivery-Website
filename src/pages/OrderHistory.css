@@ -1,0 +1,149 @@
+.orders-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.orders-container h1 {
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.no-orders p {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--bg-light);
+}
+
+.order-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+.order-date {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.status {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.confirmed {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.delivered {
+  background-color: #b3e5fc;
+  color: #01579b;
+}
+
+.order-items {
+  margin-bottom: 20px;
+}
+
+.order-items h4 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item span:first-child {
+  flex: 1;
+}
+
+.order-item span:nth-child(2) {
+  color: var(--text-light);
+  margin: 0 15px;
+}
+
+.order-item .price {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .order-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .status {
+    align-self: flex-start;
+  }
+
+  .order-item {
+    flex-wrap: wrap;
+  }
+}
